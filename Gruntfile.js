@@ -118,7 +118,8 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        reporter: require('jshint-stylish'),
+        force: true
       },
       all: {
         src: [
@@ -131,6 +132,16 @@ module.exports = function (grunt) {
           jshintrc: 'test/.jshintrc'
         },
         src: ['test/spec/{,*/}*.js']
+      },
+      ci: {
+        options: {
+          reporter: 'checkstyle',
+          reporterOutput: 'jshint-result.xml'
+        },
+        src: [
+          'Gruntfile.js',
+          '<%= yeoman.app %>/scripts/{,*/}*.js'
+        ]
       }
     },
 
