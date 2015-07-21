@@ -430,6 +430,15 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
+  grunt.registerTask('ci', [
+    'clean:server',
+    'wiredep',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'jshint:ci'
+  ]);
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
