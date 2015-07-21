@@ -5,3 +5,4 @@ This is an opinionated Angular project starter based on the initial project gene
 List of changes:
 * Bootstrap version is fixed to 3.3.4 due to [yeoman/generator-angular#1116](https://github.com/yeoman/generator-angular/issues/1116).
 * Use the "force" option of JSHint to make sure JSHint only report errors but not fail the task.
+* Add a CI target for JSHint and produce checkstyle report for CI (Jenkins, etc).
