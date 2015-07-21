@@ -5,4 +5,4 @@ dist
 .sass-cache
 bower_components
 jshint-result.xml
-coverage/
+test/coverage/

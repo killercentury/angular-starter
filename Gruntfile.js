@@ -406,7 +406,7 @@ module.exports = function(grunt) {
         },
         coverageReporter: {
           type: 'lcovonly',
-          dir: 'coverage/',
+          dir: 'test/coverage/',
           file: 'lcov.info'
         }
       }
