@@ -9,4 +9,9 @@ install:
   - bower install
   - npm install
 script:
-  - grunt ci
+  - grunt travis
+after_script:
+  - codeclimate-test-reporter < coverage/**/lcov.info
+addons:
+  code_climate:
+    repo_token: 95be8053813e83f4e7fb8ed21a0d34484498bbf1f2beee9a3a28eef002c87331
