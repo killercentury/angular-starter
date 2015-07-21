@@ -1,7 +1,7 @@
 node_modules
 dist
 .idea
-.jshint-result.xml
 .tmp
 .sass-cache
 bower_components
+jshint-result.xml
