@@ -409,6 +409,23 @@ module.exports = function(grunt) {
           dir: 'test/coverage/',
           file: 'lcov.info'
         }
+      },
+      jenkins: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true,
+        colors: false,
+        reporters: ['dots', 'junit', 'progress', 'coverage'],
+        junitReporter: {
+          outputFile: 'junit-test-report.xml'
+        },
+        preprocessors: {
+          'app/scripts/**/*.js': ['coverage']
+        },
+        coverageReporter: {
+          type: 'cobertura',
+          dir: 'test/coverage/',
+          file: 'cobertura.xml'
+        }
       }
     }
   });
@@ -452,6 +469,16 @@ module.exports = function(grunt) {
     'jshint:ci',
     'karma:travis'
   ]);
+
+  grunt.registerTask('jenkins', [
+      'clean:server',
+      'wiredep',
+      'concurrent:test',
+      'autoprefixer',
+      'connect:test',
+      'jshint:ci',
+      'karma:jenkins'
+    ]);
 
   grunt.registerTask('build', [
     'clean:dist',

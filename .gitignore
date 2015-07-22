@@ -5,4 +5,5 @@ dist
 .sass-cache
 bower_components
 jshint-result.xml
+junit-test-report.xml
 test/coverage/
