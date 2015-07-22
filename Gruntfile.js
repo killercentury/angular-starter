@@ -416,6 +416,7 @@ module.exports = function(grunt) {
         colors: false,
         reporters: ['dots', 'junit', 'progress', 'coverage'],
         junitReporter: {
+          outputDir: 'test',
           outputFile: 'junit-test-report.xml'
         },
         preprocessors: {
