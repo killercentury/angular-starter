@@ -439,7 +439,9 @@ module.exports = function (grunt) {
       },
       run: {},
       travis: {
-        keepAlive: false
+        options: {
+          keepAlive: false
+        }
       },
       jenkins: {}
     }
