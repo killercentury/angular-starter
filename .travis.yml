@@ -8,6 +8,7 @@ before_install:
 install:
   - bower install
   - npm install
+  - ./node_modules/.bin/webdriver-manager update
 script:
   - grunt travis
 after_script:
