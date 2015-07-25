@@ -16,3 +16,5 @@ List of changes:
 * Add an "e2e" subdirectory under the test directory and basic e2e tests inside.
 * Add a default protractor config for local development without specified fixed selenium address.
 * Add grunt config for protractor.
+* Add protractor task to the default test task and create separated tasks for unit tests and e2e tests.
+* Add protractor task to CI tasks.

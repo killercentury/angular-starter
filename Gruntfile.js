@@ -468,7 +468,26 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
+    'karma:unit',
+    'protractor:all'
+  ]);
+
+  grunt.registerTask('test:unit', [
+    'clean:server',
+    'wiredep',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
     'karma:unit'
+  ]);
+
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'wiredep',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'protractor:all'
   ]);
 
   grunt.registerTask('travis', [
@@ -478,7 +497,8 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'jshint:ci',
-    'karma:travis'
+    'karma:travis',
+    'protractor:all'
   ]);
 
   grunt.registerTask('jenkins', [
@@ -488,7 +508,8 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'jshint:ci',
-    'karma:jenkins'
+    'karma:jenkins',
+    'protractor:all'
   ]);
 
   grunt.registerTask('build', [
