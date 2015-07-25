@@ -437,7 +437,11 @@ module.exports = function (grunt) {
         keepAlive: true,
         noColor: false
       },
-      all: {}
+      run: {},
+      travis: {
+        keepAlive: false
+      },
+      jenkins: {}
     }
   });
 
@@ -469,7 +473,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'karma:unit',
-    'protractor:all'
+    'protractor:run'
   ]);
 
   grunt.registerTask('test:unit', [
@@ -487,7 +491,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'protractor:all'
+    'protractor:run'
   ]);
 
   grunt.registerTask('travis', [
@@ -498,7 +502,7 @@ module.exports = function (grunt) {
     'connect:test',
     'jshint:ci',
     'karma:travis',
-    'protractor:all'
+    'protractor:travis'
   ]);
 
   grunt.registerTask('jenkins', [
@@ -509,7 +513,7 @@ module.exports = function (grunt) {
     'connect:test',
     'jshint:ci',
     'karma:jenkins',
-    'protractor:all'
+    'protractor:jenkins'
   ]);
 
   grunt.registerTask('build', [
