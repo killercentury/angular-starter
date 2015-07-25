@@ -10,4 +10,9 @@ List of changes:
 * Bootstrap version is fixed to 3.3.4 due to [yeoman/generator-angular#1116](https://github.com/yeoman/generator-angular/issues/1116).
 * Use the "force" option of JSHint to make sure JSHint only report errors but not fail the task.
 * Add a CI target for JSHint and produce checkstyle report for CI (Jenkins, etc).
-* Install "karma-coverage" and "karma-junit-reporter" and enable it via the "karma.conf.js"
+* Install "karma-coverage" and "karma-junit-reporter" and enable it via the "karma.conf.js".
+* Add karma targets for Travis and Jenkins.
+* Install "protractor" and "grunt-protractor-runner".
+* Add an "e2e" subdirectory under the test directory and basic e2e tests inside.
+* Add a default protractor config for local development without specified fixed selenium address.
+* Add grunt config for protractor.
