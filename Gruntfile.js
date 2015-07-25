@@ -440,6 +440,7 @@ module.exports = function (grunt) {
       run: {},
       travis: {
         options: {
+          configFile: "test/protractor.travis.conf.js",
           keepAlive: false
         }
       },
